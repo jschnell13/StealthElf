@@ -18,6 +18,6 @@
         - The program terminates or returns to the Step 3 <br>
 
 ## Links
--[**Team Details and Problem Statement**](https://github.com/jschnell13/StealthElf/blob/main/Documentation/Team%20Details%20and%20Problem%20Statement.md) <br>
--[**Planning**](https://github.com/jschnell13/StealthElf/blob/main/Documentation/Planning.md) <br>
--[**Requirements**](https://github.com/jschnell13/StealthElf/blob/main/Documentation/Requirements.md)
+-**4.1 - The Basics**: [Team Details and Problem Statement](https://github.com/jschnell13/StealthElf/blob/main/Documentation/Team%20Details%20and%20Problem%20Statement.md) <br>
+-**4.2 - Planning**:[Planning](https://github.com/jschnell13/StealthElf/blob/main/Documentation/Planning.md) <br>
+-**4.3 - Requirements**:[Requirements](https://github.com/jschnell13/StealthElf/blob/main/Documentation/Requirements.md)
