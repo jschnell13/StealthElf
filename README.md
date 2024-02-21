@@ -18,6 +18,6 @@
         - The program terminates or returns to the step 3
 
 ## Links
--[**title**](https://www.example.com)
--[**title**](https://www.example.com)
--[**title**](https://www.example.com)
+-[**Team Details and Problem Statement**](https://github.com/jschnell13/StealthElf/blob/main/Documentation/Team%20Details%20and%20Problem%20Statement.md)
+-[**Planning**](https://github.com/jschnell13/StealthElf/blob/main/Documentation/Planning.md)
+-[**Requirements**](https://github.com/jschnell13/StealthElf/blob/main/Documentation/Requirements.md)
