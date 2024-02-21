@@ -1,5 +1,5 @@
 # StealthElf
-### CYBR-404 Waterfall Project - Backup
+### Waterfall Project - Backup Program
 
 ## Workflow
 > NOTE: Ordered items are visible to the user, unordered items occur in the background
