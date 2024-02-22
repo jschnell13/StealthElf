@@ -11,3 +11,9 @@
 - This software will use Java as an executable to run within a CLI interface. Writing to a .csv will be the method for storing system data initiated by the user. This will maintain a light, minimal system.
 
 **Security Requirements** - For each of the documents above, what are the matching security requirements?
+- Use proven and popular Java libraries , try to avoid serialization.
+- Hash user passwords, not logging sensative information (for example not storing a user's documents/folders after process has completed).
+- Prevent injection attack, watch for SQL injection opportunities.
+- Make sure the file path given is valid.
+source: https://www.guardrails.io/blog/12-java-security-best-practices/
+- Watch out for user input (!!!) avoid user input when possible and protect against all user input. 
