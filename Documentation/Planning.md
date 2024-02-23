@@ -1,6 +1,6 @@
 ## 4.2 - Planning
 
-###Executive Summary
+#### Executive Summary
 
 - **Executive Summary** -  Describe the problem, the process to solve the problem, the proposed solution, and the expected deliverables.
 - **Statement of Work** - In the statement of work outline your project objectives, your scope, and outline the expectations your team has upon completion.
