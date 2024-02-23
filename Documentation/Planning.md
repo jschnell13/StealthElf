@@ -17,6 +17,11 @@
 - **What void is being filled** - The void filled is a lack of free, easy-to-use backup software.
 - **Who will use your system** - Our system will be utilized by Window's users who wish to backup their files.
 
+#### Timeline
 - **Timeline** - Produce a graphical timeline that indicates milestones and when you meet them. Include security milestones.
-- **Outcome Summary** - Outline what your expected outcomes will be in more detail. What will the final product be?
-- **Security Statement** - Create a statement concerning the security outcomes and how security will be applied to the problem and the outcomes stated in the Problem Statement and Outcome Summary
+
+#### Outcome Summary
+- **Outcome Summary** - Our expected outcome is best described by a program that meets the requirements of our workflow. Workflow: ************
+
+#### Security Statement
+- **Security Statement** - Due to the limited scope of our project, our security goals are closely aligned with ensuring that the user can only input valid options. For menu options, the only accepted input will be a menu option. For files and folders, the program will validate the user's input. For creating presets, the program will ensure that the preset doesn't already exist. For deleting presets, the program will validate that the preset does indeed exist prior to deletion.
