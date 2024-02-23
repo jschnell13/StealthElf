@@ -1,10 +1,23 @@
 ## 4.2 - Planning
 
 #### Executive Summary
+- **Problem** - 
+- **Process to Solve the Problem** - To solve the problem, we plan to create a software with the following workflow:********
+- **Proposed Solution** - A backup software that zips and then stores selected folders onto a USB drive.
+- **Expected Deliverables** - A backup software, a CSV file that stores the User's presets
+  
+#### Statement of Work
+- **Project Objectives** -  Describe 
+- **Scope** - In t
+- **Expectations of the Team upon Completion** - Pr
 
-- **Executive Summary** -  Describe the problem, the process to solve the problem, the proposed solution, and the expected deliverables.
-- **Statement of Work** - In the statement of work outline your project objectives, your scope, and outline the expectations your team has upon completion.
+#### Problem Statement
+- **Problem** -  Describe 
+- **Why a solution is needed** - In t
+- **What void is being filled** - Pr
+- **Who will use your system** - Pr
+
+
 - **Timeline** - Produce a graphical timeline that indicates milestones and when you meet them. Include security milestones.
-- **Problem Statement** - In this document outline: 1) what the problem is, 2) why a solution is needed, 3) what void is being filled, and 4) who will use your system
 - **Outcome Summary** - Outline what your expected outcomes will be in more detail. What will the final product be?
 - **Security Statement** - Create a statement concerning the security outcomes and how security will be applied to the problem and the outcomes stated in the Problem Statement and Outcome Summary
