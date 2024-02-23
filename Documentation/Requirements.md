@@ -8,7 +8,10 @@
 - USB (user provided)
 
 **Software Requirements** - What kind of software packages will be needed in design, development, and deployment? Include your programming languages here.
-- This software will use Java as an executable to run within a CLI interface. Writing to a .csv will be the method for storing system data initiated by the user. This will maintain a light, minimal system.
+- This software will be written in Java using Visual Studio.
+- Deliverable will be an executable to run within a CLI interface.
+- Writing to a .csv will be the method for storing system data initiated by the user. This will maintain a light, minimal system.
+- Script?
 
 **Security Requirements** - For each of the documents above, what are the matching security requirements?
 - Use proven and popular Java libraries , try to avoid serialization.
