@@ -18,7 +18,7 @@
 - **Who will use your system** - Our system will be utilized by Window's users who wish to backup their files.
 
 #### Timeline
-![Gantt chart displaying project timeline](Images/gantt timeline.png)
+![Gantt chart displaying project timeline](https://github.com/jschnell13/StealthElf/blob/main/Images/gantt%20timeline.png)
 
 #### Outcome Summary
 - **Outcome Summary** - Our expected outcome is best described by a program that meets the requirements of our workflow. Workflow: [Workflow](https://github.com/jschnell13/StealthElf/blob/main/Documentation/Workflow.md) <br>
