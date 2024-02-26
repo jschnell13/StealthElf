@@ -11,7 +11,7 @@
 - This software will be written in Java using Visual Studio.
 - Deliverable will be an executable to run within a CLI interface.
 - Writing to a .csv will be the method for storing system data initiated by the user. This will maintain a light, minimal system.
-- Script?
+- Write a simple batch script to start the java program after clicking an icon
 
 **Security Requirements** - For each of the documents above, what are the matching security requirements?
 - Use proven and popular Java libraries , try to avoid serialization.
