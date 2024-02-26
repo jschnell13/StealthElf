@@ -14,8 +14,8 @@
 - Write a simple batch script to start the java program after clicking an icon
 
 **Security Requirements**
-- Use proven and popular Java libraries , try to avoid serialization.
-- Hash user passwords, not logging sensative information (for example not storing a user's documents/folders after process has completed).
+- Use proven and popular Java libraries, try to avoid serialization.
+- Hash user passwords, not logging sensitive information (for example not storing a user's documents/folders after process has completed).
 - Prevent injection attack, watch for SQL injection opportunities.
 - Make sure the file path given is valid.
 source: https://www.guardrails.io/blog/12-java-security-best-practices/
