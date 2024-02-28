@@ -1,1 +1,7 @@
-# This is the Security Design Documentation
+## This is the Security Design Documentation
+
+Our backup software will be capable of being opened through an icon that the user can click (visable on the user's computer screen).
+When the icon is clicked, the software will open in terminal. 
+Once in terminal, the user will be prompted:
+  1. The user will be asked if they would like a preset. The user will be able to select from a numbered list. The numbered list will list the preset options.
+  2. The program will then ask for preset selection by the 
