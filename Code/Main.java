@@ -102,30 +102,3 @@ public class Main {
         Backup.copyFile(selectedFile);
     }
 }
-
-class Preset {
-
-
-    public void checkPreset(){
-        System.out.println("Hello from the Preset class!");
-    }
-
-    public void newPreset(){
-        System.out.println("Creating new Preset...");
-    }
-
-    public void loadPreset(){
-        System.out.println("Loading Preset...");
-    }
-
-    public void deletePreset(){
-        System.out.println("Deleting preset...");
-    }
-}
-
-class Backup {
-
-    public static void copyFile(File inputFile){
-        System.out.println("you found: " + inputFile);
-    }
-}
