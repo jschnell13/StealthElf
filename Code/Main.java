@@ -1,11 +1,15 @@
 import java.io.File;
 import java.util.Scanner;
+import java.awt.Desktop;
+
 
 public class Main {
 
     public static void main(String[] args){
         Integer userSelection = showMenu();
         Scanner scanner = new Scanner(System.in);
+        Preset testPreset = new Preset();
+
         // Take actions based on validated user input
         if(userSelection == 1){ // MANUAL SELECTION
             System.out.println("\n\nWelcome to MANUAL SELECTION mode!\n____________________________________________\n");
@@ -13,16 +17,13 @@ public class Main {
         } else {
             if(userSelection == 2){ // PICK PRESET
                 System.out.println("selection: 2");
-                Preset testPreset = new Preset();
                 testPreset.checkPreset();
             } else {
                 if(userSelection == 3){ // CREATE PRESET
                     System.out.println("selection: 3");
-                    Preset testPreset = new Preset();
                     testPreset.checkPreset();
                 } else { // DELETE PRESET
                     System.out.println("selection: 4");
-                    Preset testPreset = new Preset();
                     testPreset.checkPreset();
                 }
             }
@@ -78,8 +79,14 @@ public class Main {
         String filePath = scanner.nextLine();
 
         File file = new File(filePath);
+        Desktop desktop = Desktop.getDesktop();
         if(file.exists()){
             System.out.println("File location successfully located.");
+            try{
+                desktop.open(file);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
         }
         else {
             System.out.println("Uh oh! File location not found!");
@@ -92,15 +99,12 @@ public class Main {
         System.out.println("Please copy and paste the path to the directory you would like to backup below.\n" + //
         "____________________________________________\n");
         File selectedFile = validateFileLocation();
-        Backup.zipFile(selectedFile);
+        Backup.copyFile(selectedFile);
     }
 }
 
 class Preset {
 
-    public static void main(String[] args){
-        System.out.println("\nIn preset class.\n");
-    }
 
     public void checkPreset(){
         System.out.println("Hello from the Preset class!");
@@ -121,11 +125,7 @@ class Preset {
 
 class Backup {
 
-    public static void main(String[] args){
-        System.out.println("\nIn backup class.\n");
-    }
-
-    public static void zipFile(File inputFile){
+    public static void copyFile(File inputFile){
         System.out.println("you found: " + inputFile);
     }
 }
