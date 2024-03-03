@@ -5,7 +5,6 @@
   * validateFileLocation - Complete
   * manualSelection - Complete
   * runningCheck - Complete
-  * zipFile - Must be added
  
 * Backup
   * copyFile - Incomplete
@@ -15,5 +14,3 @@
   * newPreset- Incomplete
   * loadPreset - Incomplete
   * deletePreset - Incomplete
- 
-* CSVStorage - Must be implemented
