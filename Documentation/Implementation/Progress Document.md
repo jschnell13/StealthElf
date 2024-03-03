@@ -15,3 +15,5 @@
   * newPreset- Incomplete
   * loadPreset - Incomplete
   * deletePreset - Incomplete
+ 
+* CSVStorage - Must be implemented
