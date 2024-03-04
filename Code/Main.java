@@ -2,13 +2,12 @@ import java.io.File;
 import java.util.Scanner;
 import java.awt.Desktop;
 
-
 public class Main {
 
     public static void main(String[] args){
         Integer userSelection = showMenu();
         Scanner scanner = new Scanner(System.in);
-        Preset testPreset = new Preset();
+        Preset preset = new Preset();
 
         // Take actions based on validated user input
         if(userSelection == 1){ // MANUAL SELECTION
@@ -16,15 +15,16 @@ public class Main {
             manualSelection();
         } else {
             if(userSelection == 2){ // PICK PRESET
-                System.out.println("selection: 2");
-                testPreset.checkPreset();
+                preset.checkPreset();
+                preset.showPresets();
             } else {
                 if(userSelection == 3){ // CREATE PRESET
                     System.out.println("selection: 3");
-                    testPreset.checkPreset();
+                    preset.checkPreset();
+                    preset.newPreset();;
                 } else { // DELETE PRESET
                     System.out.println("selection: 4");
-                    testPreset.checkPreset();
+                    preset.checkPreset();
                 }
             }
         }
@@ -43,6 +43,7 @@ public class Main {
                 System.out.println("\nStealthELF Backup Program exited.\nGoodbye!\n");
             } else {
                 System.out.println(">>> Please enter a valid input.");
+                runningCheck();
             }
         }
     }
@@ -83,7 +84,7 @@ public class Main {
         if(file.exists()){
             System.out.println("File location successfully located.");
             try{
-                desktop.open(file);
+ //               desktop.open(file);
             } catch (Exception e) {
                 System.out.println(e);
             }
