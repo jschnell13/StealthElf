@@ -3,7 +3,7 @@ import java.util.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.FileWriter;
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
 
 class Preset {
 
@@ -17,13 +17,14 @@ class Preset {
         try{
             Scanner readFile = new Scanner(presetfile);
             readFile.nextLine();
-            System.out.println("\nAvailable Presets:\n__________________________________\n");
+            System.out.println("\nAVAILABLE PRESETS:\nFormat: [Preset name, file path, last backup date]\n"+ //
+                                "__________________________________\n");
             while(readFile.hasNextLine()) {
  //               String presetEntry = readFile.nextLine();
 //                System.out.println(presetEntry);
                 presetsArray.add(getRow(readFile.nextLine()));
             }
-            readFile.close();
+//            readFile.close();
             for(List<String> s : presetsArray){
                 System.out.println(s);
             }
@@ -41,7 +42,7 @@ class Preset {
             while(scanRow.hasNext()) {
                 rowContents.add(scanRow.next());
             }
-            scanRow.close();
+ //           scanRow.close();
         } catch(Exception e) {
             System.out.println(e);
         }
@@ -56,9 +57,12 @@ class Preset {
     public void newPreset(){
         try{
             FileWriter presetWriter = new FileWriter("Code/stealthELFstore.csv", true);
-            Scanner scanName
-            presetWriter.write("test, test, test\n");
+            Scanner scanName = new Scanner(System.in);
+            System.out.println("New Preset Name: ");
+            String timeStamp = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
+            presetWriter.write(scanName.nextLine() + "," + "ADD FILEPATH" + "," + timeStamp + "\n");
             presetWriter.close();
+ //           scanName.close()
         } catch (IOException e) {
             System.out.println("FILE ERROR.");
         }

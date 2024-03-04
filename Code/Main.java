@@ -73,7 +73,7 @@ public class Main {
         return 1;
     }
 
-    private static File validateFileLocation(){
+    public static File validateFileLocation(){
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please input a filepath: ");
