@@ -116,7 +116,6 @@ public class Main {
                 System.out.println("Manual selection complete.\n");
                 runningCheck();
             } else {
-                System.out.println(">>> Please enter a valid input.");
                 runningCheck();
             }
         }
