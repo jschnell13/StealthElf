@@ -1,6 +1,7 @@
 import java.io.File;
 import java.util.Scanner;
-import java.awt.Desktop;
+import java.nio.file.Path;
+import java.util.*;
 
 public class Main {
 
@@ -13,26 +14,31 @@ public class Main {
         if(userSelection == 1){ // MANUAL SELECTION
             System.out.println("\n\nWelcome to MANUAL SELECTION mode!\n____________________________________________\n");
             manualSelection();
-        } else {
-            if(userSelection == 2){ // PICK PRESET
-                preset.checkPreset();
-                preset.showPresets();
-            } else {
-                if(userSelection == 3){ // CREATE PRESET
-                    System.out.println("selection: 3");
-                    preset.checkPreset();
-                    preset.newPreset();;
-                } else { // DELETE PRESET
-                    System.out.println("selection: 4");
-                    preset.checkPreset();
-                }
+        } 
+        else if (userSelection == 2){// PICK PRESET
+            System.out.println("\n____________________________________________\n\n\t\tPICK PRESET\n____________________________________________\n");
+            List<List<String>> presetsArray = preset.showPresets();
+            System.out.print("Enter Preset Number: ");
+            List<String> foundPreset = null;
+            do {
+                foundPreset = preset.checkPreset(scanner.nextLine(), presetsArray);
+                if(foundPreset == null)
+                    System.out.println("Invalid Selection! Please try again.");
             }
+            while(foundPreset == null);
+            preset.loadPreset(foundPreset);
         }
-    runningCheck();
+        else if(userSelection == 3){ // CREATE PRESET
+                preset.newPreset();;
+        } 
+        else { // DELETE PRESET
+            preset.deletePreset();
+        }
+        runningCheck();
     }
 
     private static void runningCheck() {
-        System.out.println("Success!\nWould you like to continue with another task or exit?\n" + //
+        System.out.print("Would you like to continue with another task or exit?\n" + //
                         "Enter C to continue or E to exit:");
         Scanner scanner = new Scanner(System.in);
         String running = scanner.nextLine();
@@ -50,7 +56,7 @@ public class Main {
 
     public static int showMenu(){ // Returns the numerical selection of the user
         Scanner scanner = new Scanner(System.in);
-        System.out.println("\n\nStealthELF Backup Software\n____________________________________________\n\n" + //
+        System.out.print("\n\nStealthELF Backup Software\n____________________________________________\n\n" + //
                         "Please make a selection below for what you would like to do first:\n\n" + //
                         "\t(1) Manual Selection\n\t(2) Pick Preset\n\t(3) Create Preset\n\t(4) Delete Preset\n" + //
                         "\nEnter menu number to select: ");
@@ -76,15 +82,13 @@ public class Main {
     public static File validateFileLocation(){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please input a filepath: ");
+        System.out.print("Please input a filepath: ");
         String filePath = scanner.nextLine();
 
         File file = new File(filePath);
-        Desktop desktop = Desktop.getDesktop();
         if(file.exists()){
             System.out.println("File location successfully located.");
             try{
- //               desktop.open(file);
             } catch (Exception e) {
                 System.out.println(e);
             }
@@ -97,9 +101,24 @@ public class Main {
     }
 
     static void manualSelection(){
-        System.out.println("Please copy and paste the path to the directory you would like to backup below.\n" + //
+        System.out.println("Please copy and paste the path to the file you would like to backup below.\n" + //
         "____________________________________________\n");
-        File selectedFile = validateFileLocation();
+        Path selectedFile = Backup.validateBackupPath();
         Backup.copyFile(selectedFile);
+        
+        System.out.println("Would you like to backup another path?\nEnter y for yes or n for no:");
+        Scanner scanner = new Scanner(System.in);
+        String running = scanner.nextLine();
+        if(running.toUpperCase().equals("y")) {
+            manualSelection();
+        } else {
+            if(running.toUpperCase().equals("n")) {
+                System.out.println("Manual selection complete.\n");
+                runningCheck();
+            } else {
+                System.out.println(">>> Please enter a valid input.");
+                runningCheck();
+            }
+        }
     }
 }
