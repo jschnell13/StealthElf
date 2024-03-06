@@ -57,7 +57,7 @@ public class Main {
     public static int showMenu(){ // Returns the numerical selection of the user
         Scanner scanner = new Scanner(System.in);
         System.out.print("\n\nStealthELF Backup Software\n____________________________________________\n\n" + //
-                        "Please make a selection below for what you would like to do first:\n\n" + //
+                        "Please make a selection below for what you would like to do:\n\n" + //
                         "\t(1) Manual Selection\n\t(2) Pick Preset\n\t(3) Create Preset\n\t(4) Delete Preset\n" + //
                         "\nEnter menu number to select: ");
 
