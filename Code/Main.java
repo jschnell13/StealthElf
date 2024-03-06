@@ -31,8 +31,12 @@ public class Main {
         else if(userSelection == 3){ // CREATE PRESET
                 preset.newPreset();;
         } 
-        else { // DELETE PRESET
+        else if(userSelection == 4){ // DELETE PRESET
             preset.deletePreset();
+        }
+        else {
+            System.out.println("Invalid input.");
+            main(null);
         }
         runningCheck();
     }
@@ -69,7 +73,7 @@ public class Main {
             } 
             else {
                 System.out.println("Please enter a valid input.");
-                
+                showMenu();
             }
         }
         catch (Exception e) {
