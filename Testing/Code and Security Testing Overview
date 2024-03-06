@@ -1,0 +1,13 @@
+Code and Security Testing Overview - What tests need to be carried out and why
+There are seven code-specific tests to be conducted. 
+These tests are:
+From the startup menu:
+- When the user inputs 1
+- When the user inputs 2
+- When the user inputs 4
+Once the user is prompted to the backup functionality:
+- When the user prompted to enter a source/destination path
+Once the user is prompted that their backup was successful "success!":
+- User reruns or exits 
+For the program to open in terminal:
+- User clicks on icon
