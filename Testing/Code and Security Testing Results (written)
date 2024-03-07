@@ -6,4 +6,49 @@ Results of Code Testing:
 -- insert breif write up here --
 
 Results of Security Testing:
--- insert breif write up here -- 
+Test 1:
+The first test was the Start Menu Validation. 
+Any option aside from "1, 2, 3, 4" should show error and then reset to have user enter a valid number in the 1-4 range.
+I tested the numbers 64, 9, -1, 1.1, 2.1, 0, and 5. Additionally I tested the characters "a" and the string "opal."
+All of the test units mentioned above did result in an  error. Therefore, the functionality passes the test.
+
+Test 2: 
+The second test was File Path Validation. The purpose of this test was to ensure the program would 
+result in an error if an invalid file path is given.
+I tested the file paths:
+(a) C:alexi/7201/docs
+(b) it_is_fine_I_am_OK
+(c) C:\Users\alexi\IdeaProjects9 (the correct address in this case is C:\Users\alexi\IdeaProjects)
+(d) Main.java
+(e) 23445976
+All of the file paths listed above resulted in:
+  Uh oh! File location not found!
+  Please input a filepath: 
+The program successfully notified the user that the file location was not found.
+Then the program successfully prompts the user to enter a filepath again.
+
+Some exceptions to this rule:
+(f) The file path: C:\ Users \ alexi \ IdeaProjects resulted in the following error message:
+Exception in thread "main" java.nio.file.InvalidPathException: Trailing char < > at index 9: C:\ Users \ alexi \ IdeaProjects
+	at java.base/sun.nio.fs.WindowsPathParser.normalize(WindowsPathParser.java:194)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:175)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:77)
+	at java.base/sun.nio.fs.WindowsPath.parse(WindowsPath.java:92)
+	at java.base/sun.nio.fs.WindowsFileSystem.getPath(WindowsFileSystem.java:231)
+	at java.base/java.nio.file.Path.of(Path.java:148)
+	at java.base/java.nio.file.Paths.get(Paths.java:69)
+	at Backup.validateBackupPath(Backup.java:45)
+	at Backup.validateBackupPath(Backup.java:53)
+	at Backup.validateBackupPath(Backup.java:53)
+	at Backup.validateBackupPath(Backup.java:53)
+	at Main.manualSelection(Main.java:110)
+	at Main.main(Main.java:16)
+The correct file path is C:\Users\alexi\IdeaProjects but when spaces were entered between the address it results in an error.
+The file path C:\Users\alexi\IdeaProjects (a valid file path with no spaces) does work.
+
+(g) The file path: \Users\alexi\IdeaProjects resulted in the following error message:
+File location successfully located.
+Error.
+java.lang.NullPointerException: Cannot invoke "java.nio.file.Path.getFileSystem()" because "path" is null
+Would you like to continue with another task or exit?
+he file path C:\Users\alexi\IdeaProjects (a valid file path with the 'C:' before the path) does work.
