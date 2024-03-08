@@ -18,3 +18,8 @@
 - **Final Implementation**:  [Final Implementation](https://github.com/jschnell13/StealthElf/blob/main/Documentation/Implementation/Final%20Implementation%20Report.md) <br>
 - **Testing Directory**:  [Testing](https://github.com/jschnell13/StealthElf/tree/main/Documentation/Testing) <br>
 - **Maintenance Directory**:  [Maintenance](https://github.com/jschnell13/StealthElf/tree/main/Documentation/Maintenance) <br>
+
+#### Collaborators
+- **Carissa Kelley**:  [carissalk - Github](https://github.com/carissalk) <br>
+- **Alexis Bernthal**:  [alexisbernt - Github](https://github.com/alexisbernt) <br>
+- **Huigwang Cha**:  [chahuigwang - Github](https://github.com/chahuigwang) <br>
